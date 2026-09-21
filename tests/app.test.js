@@ -14,4 +14,23 @@ describe("Testes da aplicação web", () => {
         expect(resposta.body.sucesso).toBe(true);
     });
 
+    test("2. Deve realizar cadastro com dados válidos", async () => {
+        const emailTeste = `aluno${Date.now()}@teste.com`;
+
+        const resposta = await request(app)
+            .post("/api/cadastro")
+            .send({
+                nome: "Aluno Teste",
+                email: emailTeste,
+                senha: "123456"
+            });
+
+        expect(resposta.statusCode).toBe(201);
+        expect(resposta.body.sucesso).toBe(true);
+
+        expect(
+            usuarios.some((usuario) => usuario.email === emailTeste)
+        ).toBe(true);
+    });
+
 });
