@@ -43,6 +43,48 @@ app.post("/api/login", (req, res) => {
     });
 });
 
+
+app.post("/api/cadastro", (req, res) => {
+    const { nome, email, senha } = req.body;
+
+    if (!nome || !email || !senha) {
+        return res.status(400).json({
+            sucesso: false,
+            mensagem: "Preencha todos os campos."
+        });
+    }
+
+    if (!email.includes("@")) {
+        return res.status(400).json({
+            sucesso: false,
+            mensagem: "Informe um e-mail válido."
+        });
+    }
+
+    if (senha.length < 6) {
+        return res.status(400).json({
+            sucesso: false,
+            mensagem: "A senha deve ter pelo menos 6 caracteres."
+        });
+    }
+
+    const existe = usuarios.some((usuario) => usuario.email === email);
+
+    if (existe) {
+        return res.status(409).json({
+            sucesso: false,
+            mensagem: "Este e-mail já está cadastrado."
+        });
+    }
+
+    usuarios.push({ nome, email, senha });
+
+    return res.status(201).json({
+        sucesso: true,
+        mensagem: "Cadastro realizado com sucesso."
+    });
+});
+
 app.get("/api/status", (req, res) => {
     res.json({
         sistema: "online"
