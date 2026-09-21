@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Testes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <h1>Sistema de Login</h1>
+            <p>Aplicação simples criada para a atividade de Testes de Software.</p>
+
+            <form id="loginForm">
+                <label for="email">E-mail</label>
+                <input id="email" type="email" placeholder="carl@teste.com" required>
+
+                <label for="senha">Senha</label>
+                <input id="senha" type="password" placeholder="123456" required>
+
+                <button type="submit">Entrar</button>
+            </form>
+
+            <p id="mensagem"></p>
+        </section>
+
+        <section class="card">
+            <h2>Cadastro</h2>
+
+            <form id="cadastroForm">
+                <label for="nome">Nome</label>
+                <input id="nome" type="text" required>
+
+                <label for="novoEmail">E-mail</label>
+                <input id="novoEmail" type="email" required>
+
+                <label for="novaSenha">Senha</label>
+                <input id="novaSenha" type="password" minlength="6" required>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+
+            <p id="mensagemCadastro"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
