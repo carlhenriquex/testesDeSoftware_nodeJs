@@ -148,7 +148,7 @@ Tudo isso ajuda a reduzir problemas que o usuário poderia encontrar depois que 
 
 Os cinco cenários abaixo foram transformados em testes automatizados no arquivo `tests/app.test.js`.
 
-### Cenário 1 — Login com dados corretos
+### Cenário 1 - Login com dados corretos
 
 Objetivo do teste: verificar se um usuário cadastrado consegue entrar no sistema.
 
@@ -166,7 +166,7 @@ Resultado obtido: o teste retornou status 200 e sucesso.
 
 Situação: Aprovado.
 
-### Cenário 2 — Login com senha incorreta
+### Cenário 2 - Login com senha incorreta
 
 Objetivo do teste: verificar se o sistema impede o login quando a senha está errada.
 
@@ -183,7 +183,7 @@ Resultado obtido: o sistema retornou status 401 e não permitiu o login.
 
 Situação: Aprovado.
 
-### Cenário 3 — Login com campos vazios
+### Cenário 3 - Login com campos vazios
 
 Objetivo do teste: verificar se o sistema impede o envio de um login sem os dados necessários.
 
@@ -200,7 +200,7 @@ Resultado obtido: o sistema retornou status 400 e apresentou a mensagem esperada
 
 Situação: Aprovado.
 
-### Cenário 4 — Cadastro com dados válidos
+### Cenário 4 - Cadastro com dados válidos
 
 Objetivo do teste: verificar se um novo usuário consegue ser cadastrado.
 
@@ -218,7 +218,7 @@ Resultado obtido: o sistema retornou status 201 e confirmou o cadastro.
 
 Situação: Aprovado.
 
-### Cenário 5 — Cadastro com e-mail inválido
+### Cenário 5 - Cadastro com e-mail inválido
 
 Objetivo do teste: verificar se o sistema rejeita um cadastro com e-mail fora do formato esperado.
 
