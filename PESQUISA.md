@@ -144,7 +144,7 @@ Na acessibilidade, podemos verificar coisas como uso de teclado, identificação
 
 Tudo isso ajuda a reduzir problemas que o usuário poderia encontrar depois que o sistema fosse publicado.
 
-## 8. Questão-desafio — 5 cenários de teste
+## 8. Questão-desafio - 5 cenários de teste
 
 Os cinco cenários abaixo foram transformados em testes automatizados no arquivo `tests/app.test.js`.
 
